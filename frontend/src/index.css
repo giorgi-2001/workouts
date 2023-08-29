@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+
+/* reset */
+
+*, *::before, *::after {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* variables */
+
+:root {
+    --primary-red: hsl(0, 70%, 60%);
+    --primary-green: hsl(160, 70%, 40%);
+    --neutrall-gray: hsl(0, 0%, 25%);
+    --neutrall-light-gray: hsl(0, 0%, 37%);
+}
+
+
+/* gneral style */  
+
+body {
+    background-color: #ddd;
+    color: var(--neutrall-gray);
+}
+
+a {
+    text-decoration: none;
+    color: var(--neutrall-gray);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* utility classes */
+
+.button {
+    display: block;
+    padding: 0.5rem 1.5rem;
+    font-size: inherit;
+    font-weight: 500;
+    background-color: var(--primary-green);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    margin-inline: auto;
+}
+
+.button:hover {
+    opacity: 0.65;
+}
+
+
+
+/* component styles */
+
+.header {
+    background-color: white;
+    padding-block: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 8px 2px rgba(0,0,0,0.1);
+}
+
+.header__nav {
+    width: 100%;
+    max-width: 920px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav-link-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-link-container :is(a, p)  {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.header__button {
+    background-color: white;
+    color: var(--primary-green);
+    font-weight: 700;
+    border: 3px solid var(--primary-green);
+
+    transition: 0.2s;
+}
+
+.header__button:hover {
+    opacity: 1;
+    background-color: var(--primary-green);
+    color: white;
+
+    transition: 0.2s;
+}
+
+.nav-link-container a:hover {
+    color: var(--primary-green)
+}
+
+.header__title {
+    color: var(--neutrall-gray);
+    font-size: 1.5rem;
+    margin-right: auto;
+}
+
+.main {
+    width: 100%;
+    max-width: 920px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+.workout-element {
+    padding: 1rem 1.5rem;
+    background-color: white;
+    margin-bottom: 2rem;
+    border-radius: 7px;
+    box-shadow: 0 4px 8px 2px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.workout-element h2 {
+    color: var(--primary-green);
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.workout-element p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--neutrall-light-gray);
+}
+
+.home {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 100px;
+}
+
+.workout-form :is(input, label) {
+    display: block;
+    width: 100%;
+}
+
+.workout-form input {
+    font-size: inherit;
+    padding: 8px 15px;
+    border: 1px solid var(--neutrall-light-gray);
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+}
+
+.workout-form input:focus {
+    outline: none;
+    border-color: var(--primary-green);
+}
+
+.workout-form label {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.error-message {
+    background-color: var(--primary-red);
+    text-align: center;
+    margin-bottom: 1rem;
+    color: white;
+    padding: 5px;
+    font-weight: 500;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.delete {
+    --offset: 1.5rem;
+
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    aspect-ratio: 1;
+    background-color: #c5c5c5;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    top: var(--offset);
+    right: var(--offset);
+}
+
+.delete svg {
+    fill: var(--neutrall-gray)
+}
+
+
+.delete:hover svg {
+    fill: var(--primary-green);
+}
+
+
+.login-form {
+    max-width: 400px;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-inline: auto;
+    box-shadow: 0 4px 8px 3px rgba(0,0,0,0.15);
+}
+
+.login-form__title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
